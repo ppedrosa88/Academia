@@ -12,7 +12,7 @@ public class AlumnoManager {
         Alumno alumno = createUser();
         Session session = PrincipalManager.sessionFactory.openSession();
         session.beginTransaction();
-        session.save(alumno);
+        session.persist(alumno);
         session.getTransaction().commit();
         session.close();
     }
